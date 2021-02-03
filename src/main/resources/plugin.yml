@@ -1,0 +1,22 @@
+name: TeleportQueue
+main: com.github.bfu4.TeleportQueuePlugin
+version: 1.0
+author: bfu4
+api-version: 1.13
+
+commands:
+  teleportqueue:
+    aliases:
+      - tpq
+    permission:
+      teleportqueue
+    description: Command for managing TeleportQueuePlugin
+
+
+permissions:
+  teleportqueue:
+    children:
+      teleportqueue.info: true
+      teleportqueue.debug: true
+      teleportqueue.tp: true
+    default: op
