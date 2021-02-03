@@ -2,3 +2,4 @@
 target/
 src/main/test/
 teleport-queue.iml
+.DS_STORE
