@@ -2,6 +2,8 @@
 
 *A Conceptual Plugin for TeleportQueue-ing.*
 
+* Handles essentials as well!
+
 <br/>
 <hr />
 
