@@ -26,15 +26,17 @@
 package com.github.bfu4.teleportqueue.teleport.listener;
 
 import com.github.bfu4.teleportqueue.abs.TeleportUser;
+import net.ess3.api.events.teleport.PreTeleportEvent;
 import net.ess3.api.events.teleport.TeleportEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityTeleportEvent;
 
 public class EssentialsTeleportListener implements Listener {
 
    @EventHandler
-   public void onTeleportEvent(TeleportEvent event) {
+   public void onTeleportEvent(PreTeleportEvent event) {
       event.setCancelled(true);
       Player sender = event.getTeleportee().getBase();
 
