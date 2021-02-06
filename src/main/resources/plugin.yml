@@ -1,5 +1,5 @@
 name: TeleportQueue
-main: com.github.bfu4.TeleportQueuePlugin
+main: com.github.bfu4.teleportqueue.TeleportQueuePlugin
 version: 1.0
 author: bfu4
 api-version: 1.13
