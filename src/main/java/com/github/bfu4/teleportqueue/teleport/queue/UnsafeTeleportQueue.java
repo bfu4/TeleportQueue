@@ -92,7 +92,7 @@ public class UnsafeTeleportQueue<T extends ServerOperator> implements TeleportQu
 
    @Override
    public List<TeleportationAction<T>> getQueues() {
-      return Arrays.asList(entityQueue.toArray());
+      return entityQueue.asList();
    }
 
    @Override

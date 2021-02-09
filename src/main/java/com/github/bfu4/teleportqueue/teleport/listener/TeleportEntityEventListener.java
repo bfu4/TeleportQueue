@@ -48,10 +48,10 @@ public class TeleportEntityEventListener implements Listener {
       Queue<T> queueToUpdate = null;
       TeleportationAction<T> action = null;
       for (Queue<?> queue : TeleportQueues.QUEUES) {
-         TeleportationAction<T> a = (TeleportationAction<T>) queue.getFromQueues(event.getEntity());
+         TeleportationAction<?> a = queue.getFromQueues(event.getEntity());
          if (a != null) {
             queueToUpdate = (Queue<T>) queue;
-            action = a;
+            action = (TeleportationAction<T>) a;
             TeleportQueuePlugin.runTaskLater(a::teleport, 2L);
             break;
          }

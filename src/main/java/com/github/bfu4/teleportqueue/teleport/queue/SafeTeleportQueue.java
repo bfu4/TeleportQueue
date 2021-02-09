@@ -126,7 +126,7 @@ public class SafeTeleportQueue<T extends ServerOperator> implements TeleportQueu
 
    @Override
    public List<TeleportationAction<T>> getQueues() {
-      return Arrays.asList(entityQueue.toArray());
+      return entityQueue.asList();
    }
 
    @Override

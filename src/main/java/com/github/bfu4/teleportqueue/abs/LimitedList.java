@@ -26,6 +26,7 @@
 package com.github.bfu4.teleportqueue.abs;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class LimitedList<E> {
 
@@ -192,6 +193,10 @@ public class LimitedList<E> {
    @Override
    public String toString() {
       return Arrays.toString(elements);
+   }
+
+   public List<E> asList() {
+      return Arrays.asList(toArray());
    }
 
 }
