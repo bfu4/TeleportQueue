@@ -52,7 +52,7 @@ public class TeleportEntityEventListener implements Listener {
          if (a != null) {
             queueToUpdate = (Queue<T>) queue;
             action = a;
-            TeleportQueuePlugin.runTaskLater(() -> a.teleport(), 2L);
+            TeleportQueuePlugin.runTaskLater(a::teleport, 2L);
             break;
          }
       }
