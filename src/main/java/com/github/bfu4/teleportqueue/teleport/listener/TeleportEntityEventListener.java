@@ -25,6 +25,7 @@
 
 package com.github.bfu4.teleportqueue.teleport.listener;
 
+import com.github.bfu4.teleportqueue.TeleportQueuePlugin;
 import com.github.bfu4.teleportqueue.teleport.TeleportEntityEvent;
 import com.github.bfu4.teleportqueue.teleport.TeleportationAction;
 import org.bukkit.event.EventHandler;
