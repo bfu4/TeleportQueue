@@ -68,11 +68,11 @@ public class SafeTeleportQueue<T extends ServerOperator> implements TeleportQueu
     * @param <E> type restriction for the queue
     * @return a queue if the queue could be instantiated
     */
-   public static <E extends ServerOperator> SafeTeleportQueue<E> create(String identifier, int maxQueues) {
+   public static <S extends ServerOperator> SafeTeleportQueue<S> create(String identifier, int maxQueues) {
       if (TeleportQueues.QUEUES.stream().anyMatch(queue -> queue.getIdentifier().equalsIgnoreCase(identifier))) {
          throw new InvalidQueueException("A queue with the name " + identifier + " already exists!");
       }
-      SafeTeleportQueue<E> queue = new SafeTeleportQueue<>(identifier, maxQueues);
+      SafeTeleportQueue<S> queue = new SafeTeleportQueue<>(identifier, maxQueues);
       TeleportQueues.register(queue);
       return queue;
    }
