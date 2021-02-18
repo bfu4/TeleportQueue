@@ -77,7 +77,7 @@ public class TeleportQueuePlugin extends StandalonePlugin {
 
    @Override
    public CommandManager getManager() {
-      return null;
+      return manager;
    }
 
    @Override
