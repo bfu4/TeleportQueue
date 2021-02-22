@@ -62,14 +62,14 @@ public class UnsafeTeleportQueue<T extends ServerOperator> implements TeleportQu
     *
     * @param identifier name of the queue
     * @param maxQueues max amount of queues that the queue can hold
-    * @param <E> type restriction for the queue
+    * @param <S> type restriction for the queue
     * @return a queue if the queue could be instantiated
     */
-   public static <E extends ServerOperator> UnsafeTeleportQueue<E> create(String identifier, int maxQueues) {
+   public static <S extends ServerOperator> UnsafeTeleportQueue<S> create(String identifier, int maxQueues) {
       if (TeleportQueues.QUEUES.stream().anyMatch(queue -> queue.getIdentifier().equalsIgnoreCase(identifier))) {
          throw new InvalidQueueException("A queue with the name " + identifier + " already exists!");
       }
-      UnsafeTeleportQueue<E> queue =  new UnsafeTeleportQueue<>(identifier, maxQueues);
+      UnsafeTeleportQueue<S> queue =  new UnsafeTeleportQueue<>(identifier, maxQueues);
       TeleportQueues.register(queue);
       return queue;
    }
